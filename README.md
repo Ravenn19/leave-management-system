@@ -35,3 +35,23 @@ GitHub: https://github.com/YOUR_USERNAME/leave-management-system
 curl -X POST http://127.0.0.1:8000/api/login \
   -H "Content-Type: application/json" \
   -d '{"email":"admin@example.com","password":"password123"}'
+
+Submit Leave Request (Employee)
+curl -X POST http://127.0.0.1:8000/api/leave-requests \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"start_date":"2026-05-20","end_date":"2026-05-22","reason":"Liburan"}'
+
+Admin Approve Request
+
+curl -X PUT http://127.0.0.1:8000/api/admin/leave-requests/1/approve \
+  -H "Authorization: Bearer ADMIN_TOKEN"
+text
+
+### 7. Commit perubahan README
+
+```bash
+git add README.md
+git commit -m "Update README with API examples"
+git push
+
