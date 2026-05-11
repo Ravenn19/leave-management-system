@@ -24,3 +24,14 @@ Sistem manajemen cuti karyawan dengan Laravel 11 dan MySQL.
 ```bash
 git clone https://github.com/yourusername/leave-management-system.git
 cd leave-management-system
+
+## Repository
+GitHub: https://github.com/YOUR_USERNAME/leave-management-system
+
+## Testing dengan cURL
+
+### Login Admin
+```bash
+curl -X POST http://127.0.0.1:8000/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@example.com","password":"password123"}'
